@@ -1,0 +1,64 @@
+$back-body: hsl(212, 45%, 89%);
+$back-card: white;
+$h2: hsl(218, 44%, 22%);
+$p: hsl(220, 15%, 55%);
+$a-link: hsl(228, 45%, 44%); 
+$font: 'Outfit', sans-serif;
+
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    min-height: 97vh;
+}
+
+body {
+    @include flexCenter();
+    background: $back-body;
+    font-family: $font;
+    font-size: 15px;
+
+    .container {
+        max-width: 350px;
+        margin: 0 auto;
+
+        .card {
+            background-color: $back-card;
+            border-radius: 20px;
+            padding: 16px;
+            text-align: center;
+            margin: 0 1rem;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+                }
+            
+                    h2 {
+                        font-weight: 700;
+                        font-size: 22px;
+                        color: $h2;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        color: $p;
+                        margin-bottom: 15px;
+                        margin-top: 15px;
+                    }
+        }
+    }
+
+    .attribution { 
+        margin-top: 5px;
+        font-size: 11px;
+        text-align: center; 
+
+        a { 
+            color: $a-link; 
+        }
+    }
+}
+
+
